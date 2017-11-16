@@ -20,6 +20,14 @@ body{
     font-size: 14px;
 }
 
+p{
+    font-family: 'Raleway', sans-serif;
+}
+
+.titulo{
+    color: white;
+}
+
 .centerico {
     width: 110px;
     margin: 16%;
@@ -45,7 +53,7 @@ input{
 
 .input {
     display: block;
-    width: 93%;
+    width: 100%;
     border: solid;
     padding-left: 25px;
     border-width: 0px;
@@ -61,4 +69,11 @@ input{
     border: solid;
     border-width: 0px;
     font-weight: bold;
+}
+
+.button_intro:hover{
+    background-color: white;
+    border-width: 2px;
+    border-color: #00b0f0;
+    color: #00b0f0;
 }
