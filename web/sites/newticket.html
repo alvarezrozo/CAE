@@ -27,21 +27,23 @@
     <div class="form_inputs">
         <p class="title_form">Creación de nuevo ticket</p>
 
-        <label for="default">Elija la empresa a la cual corresponde el servicio</label>
-        <input type="text" id="default" list="languages" placeholder="e.g. Metalmuebles">
-
-        <datalist id="languages">
-            <option value="ANDINA DE TÉCNOLOGIAS">
-                <option value="CARGA MASIVA S.A.S">
-                    <option value="ELECTRICOS DE COLOMBIA S.A. (EDECOL)">
-                        <option value="INVERSIONES MAX S.A.S. - MACROMOTOS">
-                            <option value="INDUSTRIAL DE BUJES Y HERRAJES S.A.S">
-                                <option value="URIVENTAS PROPIEDAD RAIZ S.A.S">
-                                    <option value="INVERSIONES COMERCIO Y CONSTRUCCIONES S.A INCOCON S A ">
-        </datalist>
-
         <div class="row">
             <form class="col s12">
+                <label for="default">Elija la empresa a la cual corresponde el servicio</label>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" id="default" list="languages" placeholder="e.g. Metalmuebles">
+                    </div>
+                </div>
+                <datalist id="languages">
+                    <option value="ANDINA DE TÉCNOLOGIAS">
+                        <option value="CARGA MASIVA S.A.S">
+                            <option value="ELECTRICOS DE COLOMBIA S.A. (EDECOL)">
+                                <option value="INVERSIONES MAX S.A.S. - MACROMOTOS">
+                                    <option value="INDUSTRIAL DE BUJES Y HERRAJES S.A.S">
+                                        <option value="URIVENTAS PROPIEDAD RAIZ S.A.S">
+                                            <option value="INVERSIONES COMERCIO Y CONSTRUCCIONES S.A INCOCON S A ">
+                </datalist>
                 <div class="row">
                     <div class="input-field col s6">
                         <input placeholder="Placeholder" id="first_name" type="text" class="validate">
