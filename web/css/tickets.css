@@ -12,6 +12,25 @@ a:link
  text-decoration:none;   
 }  
 
+p{
+ font-family: 'Raleway', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #ccefff; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #085173; 
+}
+
 body{
     background-size: cover;
     font-family: 'Raleway', sans-serif;
@@ -69,6 +88,7 @@ div.panel {
     background-color: white;
     max-height: 0;
     overflow: hidden;
+    overflow-x: scroll;
     transition: max-height 0.2s ease-out;
 }
 .accordion_container {
@@ -151,6 +171,26 @@ tr:nth-child(even){background-color: #ccefff}
     border-color: #085173;
 }
 
+.logout{
+    width: 70px;
+    height: 70px;
+    float: right;
+    background-color: #000000;
+    border-radius: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    margin-left: 30px;
+}
+
+.logout:hover{
+    background-color: #ffffff;
+    color: #000000;
+    border: solid;
+    border-width: 2px;
+    border-color: #000000;
+}
+
 .addticket:hover{
     background-color: #ffffff;
     color: #085173;
@@ -163,9 +203,26 @@ tr:nth-child(even){background-color: #ccefff}
     height: 50px;
     width: 87%;
     margin-left: 6%;
-    margin-top: 44px;
+    margin-top: 34px;
 }
 
 .iconito{
     margin-top: 18px;
+}
+
+.container_status{
+    width: 82px;
+}
+
+.button_menu {
+    box-shadow: 4px 4px 10px #888888;
+}
+
+.tecnicocontainer {
+    width: 87%;
+    margin-left: 6%;
+    margin-top: 10px;
+    font-size: 29px;
+    font-weight: bold;
+    color: #424242;
 }

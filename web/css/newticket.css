@@ -1,0 +1,42 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+a{
+    cursor: auto;
+}
+
+a:link   
+{   
+ text-decoration:none;   
+}  
+
+body{
+    background-size: cover;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+.backbutton{
+    width: 70px;
+    height: 70px;
+    float: left;
+    background-color: #085173;
+    border-radius: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+}
+
+.backbutton:hover{
+    background-color: #ffffff;
+    color: #085173;
+    border: solid;
+    border-width: 2px;
+    border-color: #085173;
+}
+
+.iconito{
+    margin-top: 18px;
+}
