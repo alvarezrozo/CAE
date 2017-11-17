@@ -1,0 +1,171 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+a{
+    cursor: auto;
+}
+
+a:link   
+{   
+ text-decoration:none;   
+}  
+
+body{
+    background-size: cover;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+.title {
+    font-size: 39px;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-bottom: 24px;
+}
+
+button.accordion {
+    font-family: 'Raleway', sans-serif;
+    background-color: #085173;
+    color: #ffffff;
+    cursor: pointer;
+    height: 62px;
+    padding-left: 3%;
+    padding-right: 3%;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 21px;
+    transition: 0.3s;
+    margin-bottom: 24px;
+    margin-top: 10px;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ffffff;
+    border: solid;
+    border-width: 2px;
+    color: #085173;
+    border-color: #085173;
+    margin-bottom: 0px;
+}
+
+button.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2212";
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.accordion_container {
+    width: 87%;
+    margin-top: 64px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    font-family: 'Raleway', sans-serif;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even){background-color: #ccefff}
+
+.status_ticket_open {
+    width: 7px;
+    height: 7px;
+    border: solid;
+    border-color: #54ff5d;
+    border-radius: 30px;
+    border-width: 3px;
+    display: inline-block;
+}
+
+.status_ticket_wait {
+    width: 7px;
+    height: 7px;
+    border: solid;
+    border-color: blue;
+    border-radius: 30px;
+    border-width: 3px;
+    display: inline-block;
+}
+
+.status_ticket_closed {
+    width: 7px;
+    height: 7px;
+    border-radius: 30px;
+    background-color: #000000;
+    display: inline-block;
+}
+
+.backbutton{
+    width: 70px;
+    height: 70px;
+    float: left;
+    background-color: #085173;
+    border-radius: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+}
+
+.addticket {
+    width: 70px;
+    height: 70px;
+    float: right;
+    background-color: #085173;
+    border-radius: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+}
+
+.backbutton:hover{
+    background-color: #ffffff;
+    color: #085173;
+    border: solid;
+    border-width: 2px;
+    border-color: #085173;
+}
+
+.addticket:hover{
+    background-color: #ffffff;
+    color: #085173;
+    border: solid;
+    border-width: 2px;
+    border-color: #085173;
+}
+
+.buttons_container {
+    height: 50px;
+    width: 87%;
+    margin-left: 6%;
+    margin-top: 44px;
+}
+
+.iconito{
+    margin-top: 18px;
+}
