@@ -18,6 +18,10 @@ body{
     font-size: 14px;
 }
 
+p{
+    font-family: 'Raleway', sans-serif;
+}
+
 .backbutton{
     width: 70px;
     height: 70px;
@@ -48,15 +52,9 @@ body{
     margin-top: 34px;
 }
 
-.empresa{
-    width: 85%;
-    height: 100%;
-    margin-left: 5%;
-}
-
 /*dropdown*/
   
-  button {
+button {
     display: inline-block;
     border-radius: 3px;
     border: none;
@@ -70,15 +68,30 @@ body{
     margin: 0;
     width: 100%;
     text-align: center;
-  }
-  
-  button:hover, button:focus {
+}
+
+button:hover, button:focus {
     opacity: 0.75;
     cursor: pointer;
-  }
-  
-  button:active {
+}
+
+button:active {
     opacity: 1;
     box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1) inset;
-  }
-  
+}
+
+.button_menu {
+    box-shadow: 4px 4px 10px #888888;
+}
+
+.form_inputs{
+    width: 85%;
+    height: 100%;
+    margin-left: 6%;
+    margin-top: 40px;
+}
+
+.title_form {
+    font-size: 47px;
+    font-weight: bold;
+}
