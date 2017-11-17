@@ -29,7 +29,7 @@
 
         <div class="row">
             <form class="col s12">
-                <label for="default">Elija la empresa a la cual corresponde el servicio</label>
+                <p class="guia">Elija la empresa a la cual corresponde el servicio</p>
                 <div class="row">
                     <div class="input-field col s12">
                         <input type="text" id="default" list="languages" placeholder="e.g. Metalmuebles">
@@ -44,20 +44,24 @@
                                         <option value="URIVENTAS PROPIEDAD RAIZ S.A.S">
                                             <option value="INVERSIONES COMERCIO Y CONSTRUCCIONES S.A INCOCON S A ">
                 </datalist>
+                <div class="row separator"></div>
+                <p class="guia">Indique tiempo y fecha del servicio</p>
+                <div class="row separator"></div>
                 <div class="row">
-                    <div class="input-field col s6">
-                        <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-                        <label for="first_name">First Name</label>
                     </div>
                     <div class="input-field col s6">
-                        <input id="last_name" type="text" class="validate">
-                        <label for="last_name">Last Name</label>
+                        
+                        <input type="text" class="datepicker">
+                        <label for="fecha">Día del servicio <i class="fa fa-calendar icono_fecha" aria-hidden="true"></i></label>
+                        <!--captura fecha-->
                     </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input disabled value="I am not editable" id="disabled" type="text" class="validate">
-                        <label for="disabled">Disabled</label>
+                    <div class="input-field col s3">
+                        <label for="hora_inicio" class="hora_inicio">Hora inicio <i class="fa fa-clock-o" aria-hidden="true"></i></label>
+                        <input placeholder="inicio" type="text" class="timepicker">
+                    </div>
+                    <div class="input-field col s3">
+                        <label for="hora_fin" class="hora_fin">Hora fin <i class="fa fa-clock-o" aria-hidden="true"></i></label>
+                        <input placeholder="fin" type="text" class="timepicker">
                     </div>
                 </div>
                 <div class="row">

@@ -53,27 +53,6 @@ p{
 }
 
 /*dropdown*/
-  
-button {
-    display: inline-block;
-    border-radius: 3px;
-    border: none;
-    font-size: 0.9rem;
-    padding: 0.5rem 0.8em;
-    background: #69c773;
-    border-bottom: 1px solid #498b50;
-    color: white;
-    -webkit-font-smoothing: antialiased;
-    font-weight: bold;
-    margin: 0;
-    width: 100%;
-    text-align: center;
-}
-
-button:hover, button:focus {
-    opacity: 0.75;
-    cursor: pointer;
-}
 
 button:active {
     opacity: 1;
@@ -89,9 +68,26 @@ button:active {
     height: 100%;
     margin-left: 6%;
     margin-top: 40px;
+    border-width: 2px;
+    border-color: #085173; 
 }
 
 .title_form {
     font-size: 47px;
     font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.separator{
+    height: 10px;
+}
+
+.guia {
+    font-size: 17px;
+    color: #848484;
+    font-weight: bold;
+}
+
+.icono_fecha{
+    display: inline-block;
 }
