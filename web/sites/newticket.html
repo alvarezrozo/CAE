@@ -24,11 +24,12 @@
             </div>
         </a>
     </div>
+
     <div class="form_inputs">
         <p class="title_form">Creación de nuevo ticket</p>
 
         <div class="row">
-            <form class="col s12">
+            <form class="col s12 entradas">
                 <p class="guia">Elija la empresa a la cual corresponde el servicio</p>
                 <div class="row">
                     <div class="input-field col s12">
@@ -44,49 +45,66 @@
                                         <option value="URIVENTAS PROPIEDAD RAIZ S.A.S">
                                             <option value="INVERSIONES COMERCIO Y CONSTRUCCIONES S.A INCOCON S A ">
                 </datalist>
-                <div class="row separator"></div>
                 <p class="guia">Indique tiempo y fecha del servicio</p>
                 <div class="row separator"></div>
                 <div class="row">
-                    </div>
-                    <div class="input-field col s6">
-                        
-                        <input type="text" class="datepicker">
-                        <label for="fecha">Día del servicio <i class="fa fa-calendar icono_fecha" aria-hidden="true"></i></label>
-                        <!--captura fecha-->
-                    </div>
+                </div>
+                <div class="input-field col s6">
+
+                    <input type="text" class="datepicker">
+                    <label for="fecha">Día del servicio
+                        <i class="fa fa-calendar icono_fecha" aria-hidden="true"></i>
+                    </label>
+                    <!--captura fecha-->
+                </div>
+                <div class="input-field col s3">
+                    <label for="hora_inicio" class="hora_inicio">Hora inicio
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    </label>
+                    <input placeholder="inicio" type="text" class="timepicker">
+                </div>
+                <div class="input-field col s3">
+                    <label for="hora_fin" class="hora_fin">Hora fin
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    </label>
+                    <input placeholder="fin" type="text" class="timepicker">
+                </div>
+
+                <p class="guia">Dé una descripción completa del servivicio</p>
+                <div class="row separator"></div>
+                <div class="row">
                     <div class="input-field col s3">
-                        <label for="hora_inicio" class="hora_inicio">Hora inicio <i class="fa fa-clock-o" aria-hidden="true"></i></label>
-                        <input placeholder="inicio" type="text" class="timepicker">
+                        <input id="orden" type="number" class="validate">
+                        <label for="orden">N° Orden de servicio
+                            <i class="fa fa-file-text" aria-hidden="true"></i>
+                        </label>
                     </div>
-                    <div class="input-field col s3">
-                        <label for="hora_fin" class="hora_fin">Hora fin <i class="fa fa-clock-o" aria-hidden="true"></i></label>
-                        <input placeholder="fin" type="text" class="timepicker">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="password" type="password" class="validate">
-                        <label for="password">Password</label>
+                    <div class="input-field col s9">
+                        <input id="titulo_servicio" type="text" class="validate">
+                        <label for="titulo_servicio">Titulo servicio </label>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="input-field col s12">
-                        <input id="email" type="email" class="validate">
-                        <label for="email">Email</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12">
-                        This is an inline input field:
-                        <div class="input-field inline">
-                            <input id="email" type="email" class="validate">
-                            <label for="email" data-error="wrong" data-success="right">Email</label>
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea id="description" class="materialize-textarea"></textarea>
+                                <label for="description">Descripción del servicio realizado</label>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
-            </form>
         </div>
+        </form>
+    </div>
+    </div>
+
+    <div class="buttons_container_footer">
+        <a href="tickets.html">
+            <div class="backbutton button_menu submit_form">
+                <i class="fa fa-check iconito" aria-hidden="true"></i>
+            </div>
+        </a>
     </div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

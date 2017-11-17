@@ -91,3 +91,32 @@ button:active {
 .icono_fecha{
     display: inline-block;
 }
+
+.entradas{
+    height: 100%;
+}
+
+.submit_form{
+    width: 70px;
+    height: 70px;
+    float: right;
+    background-color: #33c75f;
+    border-radius: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+}
+
+.submit_form:hover{
+    background-color: #ffffff;
+    color: #000;
+    border: solid;
+    border-width: 2px;
+    border-color: #33c75f;
+}
+
+.buttons_container_footer {
+    height: 70px;
+    width: 87%;
+    margin-left: 6%;
+}
