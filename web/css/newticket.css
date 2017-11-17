@@ -40,3 +40,45 @@ body{
 .iconito{
     margin-top: 18px;
 }
+
+.buttons_container {
+    height: 70px;
+    width: 87%;
+    margin-left: 6%;
+    margin-top: 34px;
+}
+
+.empresa{
+    width: 85%;
+    height: 100%;
+    margin-left: 5%;
+}
+
+/*dropdown*/
+  
+  button {
+    display: inline-block;
+    border-radius: 3px;
+    border: none;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8em;
+    background: #69c773;
+    border-bottom: 1px solid #498b50;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    font-weight: bold;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  button:hover, button:focus {
+    opacity: 0.75;
+    cursor: pointer;
+  }
+  
+  button:active {
+    opacity: 1;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1) inset;
+  }
+  

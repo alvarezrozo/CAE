@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.png" />
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
         crossorigin="anonymous">
     <link rel="stylesheet" href="../css/newticket.css">
@@ -16,13 +17,84 @@
 
 <body>
 
-    <a href="tickets.html">
-        <div class="backbutton">
-            <i class="fa fa-arrow-left iconito" aria-hidden="true"></i>
-        </div>
-    </a>
+    <div class="buttons_container">
+        <a href="tickets.html">
+            <div class="backbutton">
+                <i class="fa fa-arrow-left iconito" aria-hidden="true"></i>
+            </div>
+        </a>
+    </div>
 
+    <div class="empresa">
+            <h1>Datalist Element Demo</h1>
+
+            <label for="default">Pick a programming language</label>
+            <input type="text" id="default" list="languages" placeholder="e.g. JavaScript">
+
+            <datalist id="languages">
+                <option value="HTML">
+                    <option value="CSS">
+                        <option value="JavaScript">
+                            <option value="Java">
+                                <option value="Ruby">
+                                    <option value="PHP">
+                                        <option value="Go">
+                                            <option value="Erlang">
+                                                <option value="Python">
+                                                    <option value="C">
+                                                        <option value="C#">
+                                                            <option value="C++">
+            </datalist>
+
+    </div>
+
+    <div class="form_inputs">
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                        <label for="first_name">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="last_name" type="text" class="validate">
+                        <label for="last_name">Last Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+                        <label for="disabled">Disabled</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password" type="password" class="validate">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" type="email" class="validate">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        This is an inline input field:
+                        <div class="input-field inline">
+                            <input id="email" type="email" class="validate">
+                            <label for="email" data-error="wrong" data-success="right">Email</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="../js/newticket.js"></script>
 </body>
 
 </html>
