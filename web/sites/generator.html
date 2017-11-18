@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/newticket.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <title>Nuevo Ticket</title>
+</head>
+
+<body>
+
+    <div class="buttons_container">
+        <a href="bussiness.html">
+            <div class="backbutton button_menu">
+                <i class="fa fa-arrow-left iconito" aria-hidden="true"></i>
+            </div>
+        </a>
+    </div>
+
+    <div class="form_inputs">
+        <p class="title_form">Generador de extractos</p>
+
+        <div class="row">
+            <form class="col s12 entradas">
+                <p class="guia">Elija la empresa a la cual corresponde el extracto</p>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" id="default" list="empresas" placeholder="e.g. Metalmuebles">
+                    </div>
+                </div>
+                <datalist id="empresas">
+                    <option value="ANDINA DE TÉCNOLOGIAS">
+                        <option value="CARGA MASIVA S.A.S">
+                            <option value="ELECTRICOS DE COLOMBIA S.A. (EDECOL)">
+                                <option value="INVERSIONES MAX S.A.S. - MACROMOTOS">
+                                    <option value="INDUSTRIAL DE BUJES Y HERRAJES S.A.S">
+                                        <option value="URIVENTAS PROPIEDAD RAIZ S.A.S">
+                                            <option value="INVERSIONES COMERCIO Y CONSTRUCCIONES S.A INCOCON S A ">
+                </datalist>
+
+                <div class="row separator"></div>
+
+                <p class="guia">Elija el tipo de contrato</p>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" id="default" list="tipo" placeholder="e.g. Telefonía">
+                    </div>
+                </div>
+                <datalist id="tipo">
+                    <option value="Telefonia IP">
+                        <option value="Correctivos PC">
+                            <option value="Correctivos servidor">
+                                <option value="CCTV">
+                                    <option value="Outsourcing">
+                </datalist>
+
+                <div class="row separator"></div>
+
+                <p class="guia">Elija el periodo del contrato</p>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="text" id="default" list="periodo" placeholder="e.g. 2018-2019">
+                    </div>
+                </div>
+                <datalist id="periodo">
+                    <option value="2001-2002">
+                        <option value="2005-2006">
+                </datalist>
+            </form>
+        </div>
+
+        <div class="buttons_container_footer">
+            <a href="bussiness.html">
+                <div class="backbutton button_menu submit_form">
+                    <i class="fa fa-check iconito" aria-hidden="true"></i>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="../js/newticket.js"></script>
+</body>
+
+</html>
