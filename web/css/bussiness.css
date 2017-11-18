@@ -180,3 +180,7 @@ body{
     width: 100%;
     height: 1px;
 }
+
+.text_notification{
+    font-weight: bold;
+}
