@@ -33,10 +33,10 @@
                 <p class="guia">Elija la empresa a la cual corresponde el servicio</p>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input type="text" id="default" list="languages" placeholder="e.g. Metalmuebles">
+                        <input type="text" id="default" list="empresas" placeholder="e.g. Metalmuebles">
                     </div>
                 </div>
-                <datalist id="languages">
+                <datalist id="empresas">
                     <option value="ANDINA DE TÉCNOLOGIAS">
                         <option value="CARGA MASIVA S.A.S">
                             <option value="ELECTRICOS DE COLOMBIA S.A. (EDECOL)">
@@ -79,7 +79,24 @@
                             <i class="fa fa-file-text" aria-hidden="true"></i>
                         </label>
                     </div>
-                    <div class="input-field col s9">
+                    <div class="input-field col s2">
+                        <input type="text" id="default" list="categorias" placeholder="Categoría">
+                    </div>
+                    <datalist id="categorias">
+                        <option value="Telefonía">
+                            <option value="Correo">
+                                <option value="CCTV">
+                                    <option value="Outsourcing">
+                    </datalist>
+                    <div class="input-field col s2">
+                        <input type="text" id="default" list="tipo" placeholder="Tipo de servicio">
+                    </div>
+                    <datalist id="tipo">
+                        <option value="Descontable">
+                            <option value="Facturable">
+                                <option value="Garantía">
+                    </datalist>
+                    <div class="input-field col s5">
                         <input id="titulo_servicio" type="text" class="validate">
                         <label for="titulo_servicio">Titulo servicio </label>
                     </div>
@@ -103,6 +120,11 @@
         <a href="tickets.html">
             <div class="backbutton button_menu submit_form">
                 <i class="fa fa-check iconito" aria-hidden="true"></i>
+            </div>
+        </a>
+        <a href="tickets.html">
+            <div class="backbutton button_menu save_ticket">
+                    <i class="fa fa-floppy-o iconito" aria-hidden="true"></i>
             </div>
         </a>
     </div>

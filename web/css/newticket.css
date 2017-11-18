@@ -115,8 +115,32 @@ button:active {
     border-color: #33c75f;
 }
 
+.save_ticket{
+    width: 70px;
+    height: 70px;
+    float: right;
+    background-color: #ffa622;
+    border-radius: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    margin-right: 30px;
+}
+
+.save_ticket:hover{
+    background-color: #ffffff;
+    color: #000;
+    border: solid;
+    border-width: 2px;
+    border-color: #ffa622;
+}
+
 .buttons_container_footer {
     height: 70px;
     width: 87%;
     margin-left: 6%;
+}
+
+label{
+    font-size: 17px !important;
 }
