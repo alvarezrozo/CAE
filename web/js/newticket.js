@@ -57,4 +57,19 @@ $('.timepicker').pickatime({
     ampmclickable: true, // make AM PM clickable
     aftershow: function(){} //Function for after opening timepicker
   });
-        
+
+/*envio de datos*/
+
+$("#default").on('input', function () {
+  location.href ="newticket.php?empresa="+$(this).val();
+});
+
+$("#abierto").on('click', function () {
+  $("#divstatus").append("<input type='hidden' name='status' value='abierto'>");
+  document.formTickets.submit();
+});
+
+$("#espera").on('click', function () {
+  $("#divstatus").append("<input type='hidden' name='status' value='espera'>");
+  document.formTickets.submit();
+});

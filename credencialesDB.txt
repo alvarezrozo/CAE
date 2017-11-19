@@ -1,0 +1,4 @@
+phpmyadmin.co/index.php
+server: mysql4.gear.host
+user: finalplataformas
+contraseña: nslssnsuc.1
