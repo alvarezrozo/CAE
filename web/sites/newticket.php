@@ -29,10 +29,62 @@
         echo '<script type="text/javascript">location.href ="../index.php";</script>';
     }
     if(isset($_POST['cliente']) && isset($_POST['status'])){
-        $cliente=$_POST['cliente'];
+        $nombreCliente=$_POST['cliente'];
         $status=$_POST['status'];
-        echo "<script>console.log('$cliente');</script>";
-        echo "<script>console.log('$status');</script>";
+        if($status=="espera"){
+            $idStatus=1;
+        }
+        if($status=="abierto"){
+            $idStatus=2;
+        }
+        $stgTipo=$_POST['tipo'];
+        if($stgTipo=="Descontable"){
+            $tipo=2;
+        }
+        if($stgTipo=="Facturable"){
+            $tipo=1;
+        }
+        if($stgTipo=="Garantia"){
+            $tipo=3;
+        }
+        $inicio=$_POST['inicio'];
+        $fin=$_POST['fin'];
+        $date=$_POST['dia'];
+        $fecha=date('d/m/Y', strtotime($date));
+        $user=$_SESSION['idUsuario'];
+        $description=$_POST['description'];
+        $titulo=$_POST['titulo'];
+        $orden=$_POST['orden'];
+        $categoria=$_POST['categoria'];
+        $data = array("idTipo" => $tipo, "inicio" => $inicio, "fin" => $fin, "fecha" => $fecha, "usuario" => $user, "description" => $description, "titulo" => $titulo, "nombreCliente" => $nombreCliente, "status" => $idStatus, "orden" => $orden, "categoria" => $categoria);                                                                    
+        $data_string = json_encode($data);
+        $curl = curl_init();
+        // Set some options - we are passing in a useragent too here
+        curl_setopt($curl, CURLOPT_URL,"http://localhost/TicketsREST/servicios");
+        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
+        curl_setopt($curl, CURLOPT_HTTPHEADER, array(                                                                          
+            'Content-Type: application/json',                                                                                
+            'Content-Length: ' . strlen($data_string))                                                                       
+        );
+
+        // in real life you should use something like:
+        // curl_setopt($ch, CURLOPT_POSTFIELDS, 
+        //          http_build_query(array('postvar1' => 'value1')));
+
+        // receive server response ...
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        // Send the request & save response to $resp
+        $resp = curl_exec($curl);
+        // Close request to clear up some resources
+        curl_close($curl);
+        $operacion=json_decode($resp);
+        if($operacion->status=="success"){
+            echo "<script>alert('Nuevo ticket ingresado')</script>";
+        }else{
+            echo "<script>alert('Error')</script>";
+        }
+        
     }
     
     
@@ -187,6 +239,27 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="../js/newticket.js"></script>
+    <script>
+        $("#default").on('input', function () {
+            location.href ="newticket.php?empresa="+$(this).val();
+        });
+    </script>
+    
+    <script>
+        $("#abierto").on('click', function () {
+            $("#divstatus").append("<input type='hidden' name='status' value='abierto'>");
+            document.formTickets.submit();
+        });
+    </script>
+
+    <script>
+        $("#espera").on('click', function () {
+            $("#divstatus").append("<input type='hidden' name='status' value='espera'>");
+            document.formTickets.submit();
+        });
+    </script>
+
+    
 
 </body>
 

@@ -28,7 +28,7 @@
                 echo '<script type="text/javascript">alert("No tiene los permisos requeridos");</script>';
                 echo '<script type="text/javascript">location.href ="../index.php";</script>';
             }
-            echo "<div class='tecnicocontainer'><p>$rol: $user </p></div>";
+            echo "<div class='tecnicocontainer'><p>Técnico: $user </p></div>";
         }else{
             echo '<script type="text/javascript">location.href ="../index.php";</script>';
         }

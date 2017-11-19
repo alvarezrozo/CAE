@@ -37,8 +37,10 @@
             $data=json_decode($resp);
             $nombre=$data[0]->NombreUsuario;
             $rol=$data[0]->NombreRol;
+            $idUsuario=$data[0]->IdUsuario;
             $_SESSION['nombreUser']=$nombre;
             $_SESSION['rol']=$rol;
+            $_SESSION['idUsuario']=$idUsuario;
             //echo $rol;
             if($rol=="Tecnico"){
                 echo '<script type="text/javascript">location.href ="sites/support.php";</script>';

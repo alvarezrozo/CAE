@@ -3,7 +3,7 @@
  * @web http://www.jc-mouse.net/
  * @author jc mouse
  */
-class PeopleDB {
+class ServiciosDB {
     
     protected $mysqli;
     const LOCALHOST = 'mysql4.gear.host:3306';
@@ -30,8 +30,8 @@ class PeopleDB {
      * @param int $id identificador unico de registro
      * @return Array array con los registros obtenidos de la base de datos
      */
-    public function getPeople($id=''){
-        $stmt = $this->mysqli->prepare("SELECT NombreUsuario, NombreRol, IdUsuario FROM usuarios INNER JOIN roles ON usuarios.Rol=roles.IdRol WHERE Username=? ; ");
+    public function getServicio($id=''){
+        $stmt = $this->mysqli->prepare("SELECT NombreUsuario, NombreRol FROM usuarios INNER JOIN roles ON usuarios.Rol=roles.IdRol WHERE Username=? ; ");
         $stmt->bind_param('s', $id);
         $stmt->execute();
         $result = $stmt->get_result();        
@@ -44,8 +44,8 @@ class PeopleDB {
      * obtiene todos los registros de la tabla "people"
      * @return Array array con los registros obtenidos de la base de datos
      */
-    public function getPeoples(){        
-        $result = $this->mysqli->query('SELECT * FROM usuarios');          
+    public function getServicios(){        
+        $result = $this->mysqli->query('SELECT NombreCliente FROM clientes');          
         $peoples = $result->fetch_all(MYSQLI_ASSOC);          
         $result->close();
         return $peoples; 
@@ -56,9 +56,9 @@ class PeopleDB {
      * @param String $name nombre completo de persona
      * @return bool TRUE|FALSE 
      */
-    public function insert($name='',$username='',$email='',$rol='',$password=''){
-        $stmt = $this->mysqli->prepare("INSERT INTO usuarios(NombreUsuario, Username, Email, Rol, Password) VALUES (?,?,?,?,?); ");
-        $stmt->bind_param('sssss', $name,$username,$email,$rol,$password);
+    public function insert($idTipo=0,$inicio='',$fin='',$fecha='',$idUser=0, $description='', $titulo='', $nombreCliente='', $status=0, $orden=0, $categoria=''){
+        $stmt = $this->mysqli->prepare("INSERT INTO servicios(IdTipo, HoraInicio, HoraFin, Fecha, IdUsuario, Descripcion, Titulo, IdCliente, IdStatus, Orden, Categoria) VALUES(?, TIME_FORMAT(?, '%H:%i:%s'), TIME_FORMAT(?, '%H:%i:%s'), STR_TO_DATE(?, '%d/%m/%Y'), ?, ?, ?, (SELECT IdCliente FROM clientes WHERE NombreCliente=?), ?, ?, (SELECT IdTipo FROM tipocontratos WHERE Nombre=?));");
+        $stmt->bind_param('sssssssssss', $idTipo,$inicio,$fin,$fecha,$idUser, $description, $titulo, $nombreCliente, $status, $orden, $categoria);
         $r = $stmt->execute(); 
         $stmt->close();
         return $r;        
