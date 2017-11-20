@@ -241,28 +241,6 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="../js/newticket.js"></script>
-    <script>
-        $("#default").on('input', function () {
-            location.href ="newticket.php?empresa="+$(this).val();
-        });
-    </script>
-    
-    <script>
-        $("#abierto").on('click', function () {
-            $("#divstatus").append("<input type='hidden' name='status' value='abierto'>");
-            document.formTickets.submit();
-        });
-    </script>
-
-    <script>
-        $("#espera").on('click', function () {
-            $("#divstatus").append("<input type='hidden' name='status' value='espera'>");
-            document.formTickets.submit();
-        });
-    </script>
-
-    
-
 </body>
 
 </html>
