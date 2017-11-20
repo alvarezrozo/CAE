@@ -27,6 +27,8 @@
         }
     }else{
         echo '<script type="text/javascript">location.href ="../index.php";</script>';
+    }if(isset($_GET['service'])){
+        
     }
     if(isset($_POST['cliente']) && isset($_POST['status'])){
         $nombreCliente=$_POST['cliente'];

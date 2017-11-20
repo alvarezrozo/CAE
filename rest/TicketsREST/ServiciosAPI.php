@@ -45,13 +45,15 @@ class ServicioAPI {
     
     
     function getServicios(){
-      if($_GET['action']=='servicios'){         
-          $db = new ServiciosDB();
-          $response = $db->getServicios();              
-          echo json_encode($response,JSON_PRETTY_PRINT);
-     }else{
-            $this->response(400);
-     }       
+        if( isset($_GET['action']) && isset($_GET['id']) ){
+            if($_GET['action']=='servicios'){         
+                $db = new ServiciosDB();
+                $response = $db->getServicio($_GET['id']);              
+                echo json_encode($response,JSON_PRETTY_PRINT);
+            }else{
+                $this->response(400);
+            }       
+        }
     }
     
     function updatePeople() {

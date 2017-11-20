@@ -30,8 +30,8 @@ class ServiciosDB {
      * @param int $id identificador unico de registro
      * @return Array array con los registros obtenidos de la base de datos
      */
-    public function getServicio($id=''){
-        $stmt = $this->mysqli->prepare("SELECT NombreUsuario, NombreRol FROM usuarios INNER JOIN roles ON usuarios.Rol=roles.IdRol WHERE Username=? ; ");
+    public function getServicio($id=0){
+        $stmt = $this->mysqli->prepare("SELECT IdServicio, Titulo, Orden, NombreCliente, Fecha, HoraInicio, HoraFin, Nombre FROM servicios INNER JOIN clientes ON servicios.IdCliente=clientes.IdCliente INNER JOIN tiposervicios ON servicios.IdTipo=tiposervicios.IdTipo WHERE IdStatus=? ; ");
         $stmt->bind_param('s', $id);
         $stmt->execute();
         $result = $stmt->get_result();        
